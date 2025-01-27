@@ -1,15 +1,13 @@
 import stanza
-#stanza.install_corenlp()
 
 from stanza.server import CoreNLPClient
 
 import re
 import csv
 import pandas as pd
-import os
 import glob
 
-os.chdir('/Users/micaelawells/Documents/CGEL/Ontonotes05/mz/')
+ONTONOTES_PATH = 'ontonotes_trees'
 
 file_pattern = "**/*.parse"  # Matches .parse files in all subdirectories
 files = glob.glob(file_pattern, recursive=True)
