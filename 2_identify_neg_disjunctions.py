@@ -7,7 +7,7 @@ results = pd.read_csv('1_results_not_or.csv')
 
 parses = stanza.models.constituency.tree_reader.read_trees("\n".join(results['tree']))
 
-tregex_pattern = '(__ < (__ < (/^[Nn][o\']t$/ > (RB $.. (__ << /^or$/) & !$ (/^or$/ $-- /whether/)) | > (RB >: (ADVP $.. (__ << /^or$/) & !$ (/^or$/ $-- /whether/))))))'
+tregex_pattern = '(__ < (__ < (/^[Nn][o\']t$/ > (__ $.. (__ << /^or$/) & !$ (/^or$/ $-- /whether/)) | > (__ >: (__ $.. (__ << /^or$/) & !$ (/^or$/ $-- /whether/))))))'
 
 with CoreNLPClient(preload=False, memory='16G') as client:
     matches = client.tregex(trees=parses,
