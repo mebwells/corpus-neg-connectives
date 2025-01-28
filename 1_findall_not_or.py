@@ -5,7 +5,7 @@ import pandas as pd
 
 ONTONOTES_PATH = 'ontonotes_trees/'
 
-# We're interested in the WSJ subdirectory and the Selected Web Sentences subdirectory
+# We're interested in the WSJ subdirectory, parts of the Web subcorpus, and English-language broadcast news
 subdirectories = ['nw/wsj', 'wb/sel', 'wb/eng', 'bn/abc', 'bn/cnn', 'bn/mnb', 'bn/nbc', 'bn/pri', 'bn/voa']
 
 # We're interested in the .parse files at any level of the subdirectories
@@ -70,5 +70,5 @@ for subdir in subdirectories:
     summary = pd.concat([summary, pd.DataFrame([[subdir, file_count, tree_count, match_count]], columns=['subcorpus', 'num_files', 'num_trees', 'num_linear_matches'])])
 
 # Save the results to a CSV file. Drop the 'match' column before saving.
-results.drop(columns=['match']).to_csv('results_not_or.csv', index=False)
-summary.to_csv('summary_not_or.csv', index=False)
+results.drop(columns=['match']).to_csv('1_results_not_or.csv', index=False)
+summary.to_csv('1_summary_not_or.csv', index=False)
