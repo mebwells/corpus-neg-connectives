@@ -3,7 +3,7 @@ import stanza
 from stanza.server import CoreNLPClient
 
 # Open the CSV file containing sentences that match the linear query
-results = pd.read_csv('results_not_or.csv')
+results = pd.read_csv('1_results_not_or.csv')
 
 parses = stanza.models.constituency.tree_reader.read_trees("\n".join(results['tree']))
 
