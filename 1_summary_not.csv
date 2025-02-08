@@ -1,0 +1,10 @@
+subcorpus,num_files,num_trees,num_linear_matches_or,num_linear_matches_and
+nw/wsj,1728,37015,257,646
+wb/sel,9027,9027,163,442
+wb/eng,18,3677,46,105
+bn/abc,69,1165,10,15
+bn/cnn,437,5758,18,75
+bn/mnb,25,637,2,15
+bn/nbc,39,641,4,10
+bn/pri,112,2049,10,46
+bn/voa,265,1897,4,27
